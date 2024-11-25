@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome Extension</title>
 </head>
+
 <body>
 
     <div>
@@ -14,7 +16,7 @@
         <button id="load-profile" style="margin: 5px;">Load Profile</button>
         <button id="delete-profile" style="margin: 5px;">Delete Profile</button>
     </div>
-    
+
     <div>
         <h2>Saved Forms</h2>
         <label for="saved-forms">Saved Forms:</label>
@@ -27,7 +29,7 @@
 
     <div>
         <h2>Job Application Dashboard</h2>
-        <table id="dashboard-table"  style="width: 100%; margin-top: 10px; border: 1px solid black">
+        <table id="dashboard-table" style="width: 100%; margin-top: 10px; border: 1px solid black">
             <thead>
                 <tr>
                     <th>Company</th>
@@ -59,11 +61,62 @@
             <button type="button" id="add-job-btn">Add Job</button>
         </form>
     </div>
-    
-                <!-- Please add the form elements here , exp name, surname-->
-    
-    
+
+
+    <h2>Enter your information</h2>
+    <div>
+
+        <form action="">
+            <fieldset>
+                <legend>Personal information</legend>
+                <label for="fname">FirstName:</label>
+                <input type="text" id="fname" name="FirstName" style="margin: 5px;">
+                <br>
+                <label for="lname">LastName:</label>
+                <input type="text" id="lname" name="LastName" style="margin: 5px;">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <p>Education level:</p>
+
+                <input type="radio" name="edu" value="High School" id="high_edu">
+                <label for="high_edu">High School</label>
+
+                <input type="radio" name="edu" value="Bachelor" id="bac_edu">
+                <label for="bac_edu">Bachelor</label>
+
+                <input type="radio" name="edu" value="Master" id="mas_edu">
+                <label for="mas_edu">Master</label>
+
+            </fieldset>
+
+            <!-- experience and certificate here as feildset -->
+            <fieldset>
+                <legend>Buttons</legend>
+
+                <button type="button" id="save_btn">Save</button>
+
+                <input type="submit" value="Submit" name="Submit" style="margin: 5px;">
+
+                <input type="reset" id="reset" value="Reset" name="Reset" style="margin: 5px;">
+
+                <button type="button" id="add_value" style="margin: 5px;">Add new field</button>
+                <br>
+                <button id="fetch_linkedin" style="margin: 5px;">Fetch LinkedIn Data</button>
+            </fieldset>
+
+        </form>
+
+
+
+
+
+    </div>
+
 
     <script src="popup.js"></script>
 </body>
+
 </html>
