@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate LinkedIn Auth URL</title>
+</head>
+<body>
+    <h1>LinkedIn Authorization URL Generator</h1>
+    <script>
+        const clientId = '7872u6o9h1rhpv';  // Replace with your LinkedIn Client ID
+        const redirectUri = 'http://localhost';  // Replace with your Redirect URI
+        const state = 'random_state_string';  // Random string to protect against CSRF attacks
+        const scope = 'r_liteprofile r_emailaddress';  // Scopes you need
+
+        const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${state}&scope=${encodeURIComponent(scope)}`;
+
+        console.log("Authorization URL: ", authorizationUrl);
+        document.body.innerHTML = `<p>Authorization URL: <a href="${authorizationUrl}" target="_blank">${authorizationUrl}</a></p>`;
+    </script>
+</body>
+</html>

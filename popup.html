@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome Extension</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -49,8 +50,8 @@
             <input type="text" id="company" required>
             <label for="title">Job Title:</label>
             <input type="text" id="title" required>
-            <label for="date">Date Applied:</label>
-            <input type="date" id="date" required>
+            <!-- <label for="date">Date Applied:</label>
+            <input type="date" id="date" required> -->
             <label for="status">Status:</label>
             <select id="status">
                 <option value="Applied">Applied</option>
@@ -60,6 +61,22 @@
             </select>
             <button type="button" id="add-job-btn">Add Job</button>
         </form>
+    </div>
+
+    <div>
+        <h2>Generate Cover Letter</h2>
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" placeholder="Enter job title" style="margin: 5px;" />
+
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" placeholder="Enter company name" style="margin: 5px;" />
+
+        <button id="generate-cover-letter" style="margin: 5px;">Generate Cover Letter</button>
+
+        <div id="cover-letter-result" style="margin-top: 20px;">
+            <h3>Generated Cover Letter</h3>
+            <textarea id="cover-letter" rows="10" cols="50" readonly></textarea>
+        </div>
     </div>
 
 
@@ -75,48 +92,92 @@
                 <label for="lname">LastName:</label>
                 <input type="text" id="lname" name="LastName" style="margin: 5px;">
                 <br>
+
+                <!-- New Email field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" style="margin: 5px;" placeholder="Enter your email">
+                <br>
+
+                <!-- New Telephone number field -->
+                <label for="telephone">Phone Number:</label>
+                <input type="tel" id="telephone" name="Telephone" style="margin: 5px;"
+                    placeholder="Enter your phone number">
+                <br>
             </fieldset>
 
             <fieldset>
                 <legend>Education</legend>
-                <p>Education level:</p>
+                <br>
+                <label for="education">Education</label>
+                <textarea name="education" id="education" name="education" rows="5" cols="15"
+                    style="margin: 5px;"></textarea>
+                <br>
 
-                <input type="radio" name="edu" value="High School" id="high_edu">
-                <label for="high_edu">High School</label>
 
-                <input type="radio" name="edu" value="Bachelor" id="bac_edu">
-                <label for="bac_edu">Bachelor</label>
-
-                <input type="radio" name="edu" value="Master" id="mas_edu">
-                <label for="mas_edu">Master</label>
 
             </fieldset>
 
-            <!-- experience and certificate here -->
+            <fieldset>
+                <legend>Experience</legend>
+                <br>
+                <label for="experience">Experience</label>
+                <textarea name="message" id="experience" name="experience" rows="5" cols="15"
+                    style="margin: 5px;"></textarea>
+                <br>
+
+                <label for="skills">Skills</label>
+                <textarea name="message" id="skills" name="skills" rows="5" cols="15" style="margin: 5px;"></textarea>
+                <br>
+
+
+
+                <label for="certificates">Certificates:</label>
+
+                <textarea id="certificates" name="certificates" rows="3" cols="15" style="margin: 5px;"></textarea>
+                <br>
+                <label for="portfolio">Portfolio Link:</label>
+                <input type="url" id="portfolio" name="portfolio" style="margin: 5px;">
+                <br>
+                <label for="summary">Personal Summary:</label>
+                <textarea id="summary" name="summary" rows="5" cols="15" style="margin: 5px;"></textarea>
+                <br>
+                <button type="button" id="add_fields">Add new fields</button>
+
+            </fieldset>
             <fieldset>
                 <legend>Buttons</legend>
 
                 <button type="button" id="save_btn">Save</button>
 
-                <input type="submit" value="Submit" name="Submit" style="margin: 5px;">
-
-                <input type="reset" id="reset" value="Reset" name="Reset" style="margin: 5px;">
-
-                <button type="button" id="add_value" style="margin: 5px;">Add new field</button>
+                <input type="reset" id="reset" value="Reset" name="Reset">
                 <br>
-                <button id="fetch_linkedin" style="margin: 5px;">Fetch LinkedIn Data</button>
+                <button type="button" id="extract">Extract Data</button>
+                <button type="button" id="Autofill" >Autofill</button>
+
+                <!-- Export Data Button -->
+                <button id="export-data">Export Data</button>
+
+                <!-- Import Data Button -->
+                <input type="file" id="import-button-file" style="display: none;" />
+                <button id="import-button">Import Data</button>
+
+                <!-- Email Data Button -->
+                <button id="email-data">Email Data</button>
+
+                
+
+
             </fieldset>
 
         </form>
-
-
-
 
 
     </div>
 
 
     <script src="popup.js"></script>
+    <script src="content.js"></script>
+
 </body>
 
 </html>

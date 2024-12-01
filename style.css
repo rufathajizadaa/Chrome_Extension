@@ -1,0 +1,175 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 350px; /* Typical width for Chrome extension popups */
+}
+
+/* Headings */
+h2 {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Labels and Inputs */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+/* Buttons */
+button,
+input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+button:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Table Styling */
+#dashboard-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#dashboard-table th,
+#dashboard-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+#dashboard-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#dashboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Fieldset and Legend */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-height: 400px; /* Prevent overflow */
+    overflow-y: auto; /* Allow scrolling */
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* Education, Experience, Skills, Certificates Section */
+section {
+    max-height: 400px; /* Prevent overflow */
+    overflow-y: auto; /* Allow scrolling */
+    margin-bottom: 15px;
+}
+
+section h3 {
+    margin-top: 0;
+}
+
+/* Cover Letter Section */
+#cover-letter-result {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+
+#cover-letter {
+    width: calc(100% - 20px);
+    border: none;
+    font-family: inherit;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* Forms and Fieldsets */
+form {
+    margin-bottom: 15px;
+}
+
+#add-job-form input,
+#add-job-form select {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#add-job-btn {
+    margin-top: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 400px) {
+    body {
+        width: auto;
+        padding: 5px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
